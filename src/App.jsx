@@ -24,7 +24,7 @@ export default function App() {
   }
 
   function removeFromCart(id) {
-    setCart(cart.filter((item) => item.id === id));
+    setCart(cart.filter((item) => item.id !== id));
   }
 
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
